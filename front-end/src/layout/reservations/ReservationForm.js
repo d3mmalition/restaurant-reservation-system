@@ -8,7 +8,7 @@ function ReservationForm({
     return (
       <form onSubmit={submitHandler} className="reservation-form">
         <div className="form-group">
-          <label htmlFor="reservationFirstNameInput">First Name</label>
+          <label htmlFor="reservationFirstNameInput" className="form-label">First Name</label>
           <input
             name="first_name"
             className="form-control"
@@ -23,7 +23,7 @@ function ReservationForm({
               })
             }
           />
-          <label htmlFor="reservationLastNameInput">Last Name</label>
+          <label htmlFor="reservationLastNameInput" className="form-label">Last Name</label>
           <input
             name="last_name"
             className="form-control"
@@ -38,7 +38,7 @@ function ReservationForm({
               })
             }
           />
-          <label htmlFor="reservationMobileNumberInput">Mobile Number</label>
+          <label htmlFor="reservationMobileNumberInput" className="form-label">Mobile Number</label>
           <input
             name="mobile_number"
             className="form-control"
@@ -55,7 +55,7 @@ function ReservationForm({
               });
             }}
           />
-          <label htmlFor="reservationDateInput">Date</label>
+          <label htmlFor="reservationDateInput" className="form-label">Date</label>
           <input
             name="reservation_date"
             type="date"
@@ -71,7 +71,7 @@ function ReservationForm({
               });
             }}
           />
-          <label htmlFor="reservationTimeInput">Time</label>
+          <label htmlFor="reservationTimeInput" className="form-label">Time</label>
           <input
             name="reservation_time"
             type="time"
@@ -87,7 +87,7 @@ function ReservationForm({
               });
             }}
           />
-          <label htmlFor="reservationNumberOfPeopleInput">
+          <label htmlFor="reservationNumberOfPeopleInput" className="form-label">
             Number of people attending
           </label>
           <input

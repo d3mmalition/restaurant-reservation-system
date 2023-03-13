@@ -10,6 +10,9 @@
   .NavBar {
     display:flex;
     flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height: 80px;
   }
   
   .NavBar .Navigation ul{
@@ -26,10 +29,6 @@
     color:white;
    }
    
-   .menu_icons {
-    color:white
-   }
-  
   
   @media (max-width: 688px) {
     
@@ -41,13 +40,10 @@
       display: flex;
     }
   
-  
-  
     .NavBar .MobileNavigation ul li {
       flex-grow: 4;
       
     }
-  
   
     .NavBar .MobileNavigation ul {
       display:flex;
@@ -56,16 +52,8 @@
       flex-grow: 1;
     }
   
-
-  
     .menu_text {
       display:none;
-    }
-    
-    .menu_icons {
-      width: 32px;
-      height: 32px;
-      color: white;
     }
     
   }
