@@ -61,7 +61,7 @@ function Dashboard({ date }) {
               history.push(`/dashboard`);
             }}
           >
-            Today's Reservations: {moment().format("YYYY-MM-DD")}
+            Today's Reservations:<p> {moment().format("YYYY-MM-DD")}</p>
           </button>
         </div>
       </React.Fragment>
@@ -84,14 +84,15 @@ function Dashboard({ date }) {
 
   return (
     <main>
-      <h2 className="ml-2">Dashboard</h2>
+      <h1 className="ml-2">Dashboard</h1>
       {dateDisplay()}
       <div className="mb-3">
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <h4 className="mb-0">Reservations for today</h4>
+          <h2 className="mb-0">Reservations for Today</h2>
         </div>
       </div>
       <ErrorAlert error={error} />
+      <hr />
       {reservations[0] && (
         <ListReservations
           data={reservations}

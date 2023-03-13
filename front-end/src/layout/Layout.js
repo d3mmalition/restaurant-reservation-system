@@ -16,7 +16,7 @@ function Layout() {
   return (
     <div className="container-fluid background">
       <title>
-        <h1>periodic tables</h1>
+        <h1>RRS - Periodic Tables</h1>
       </title>
       <div className="row h-100">
         <div className="bar">
