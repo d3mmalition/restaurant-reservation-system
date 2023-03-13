@@ -10,10 +10,6 @@ exports.seed = function (knex) {
         capacity: 4,
       },
       {
-        table_name: "Bar #3",
-        capacity: 6,
-      },
-      {
         table_name: "Table 1",
         capacity: 6,
       },
