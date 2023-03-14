@@ -18,8 +18,10 @@ app.options("*", cors({ exposedHeaders: "Access-Control-Allow-Private-Network" }
 app.use(express.json());
 
 app.use("/reservations", reservationsRouter);
-// app.use("/dashboard", reservationsRouter);
+app.use("/search", reservationsRouter);
+app.use("/dashboard", reservationsRouter);
 app.use("/tables", tableRouter);
+
 
 app.use(notFound);
 app.use(errorHandler);
