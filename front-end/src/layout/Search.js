@@ -11,20 +11,20 @@ function Search() {
   const [reservations, setReservations] = useState([]);
   const [error, setError] = useState("");
 
-  async function submitHandler(event) {
+  function submitHandler(event) {
     event.preventDefault();
     setReservations([]);
     setError("");
     const abortController = new AbortController();
-    try {
-      const response = await searchReservationsWithPhone(number, abortController.signal);
-      setReservations(response);
-      if (response.length === 0) {
-        setError({ message: "No number entered, returning all reservations." });
-      }
-    } catch (error) {
-      setError(error);
-    }
+    searchReservationsWithPhone(number, abortController.signal)
+      .then(setReservations)
+      .then(() => {
+        if (reservations.length === 0) {
+          setError({ message: "No number entered, returning all reservations." });
+        }
+      })
+      .catch(setError);
+
     return () => abortController.abort();
   }
 
@@ -51,7 +51,7 @@ function Search() {
       </form>
       <ErrorAlert error={error} />
       <ListReservations data={reservations} show={true} />
-    </div>
+          </div>
   );
 }
 
