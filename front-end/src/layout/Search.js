@@ -20,7 +20,7 @@ function Search() {
       .then(setReservations)
       .then(() => {
         if (reservations.length === 0) {
-          setError({ message: "No reservations found" });
+          setError({ message: "No number entered, returning all reservations." });
         }
       })
       .catch(setError);
@@ -50,8 +50,8 @@ function Search() {
         </button>
       </form>
       <ErrorAlert error={error} />
-      {reservations && <ListReservations data={reservations} show={true} />}
-    </div>
+      <ListReservations data={reservations} show={true} />
+          </div>
   );
 }
 
