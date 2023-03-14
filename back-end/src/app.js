@@ -13,6 +13,8 @@ const tableRouter = require("./reservations/table_reservations/table.router");
 const app = express();
 
 app.use(cors());
+app.options("*", cors({ exposedHeaders: "Access-Control-Allow-Private-Network" }));
+
 app.use(express.json());
 
 app.use("/reservations", reservationsRouter);
