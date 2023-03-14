@@ -210,12 +210,7 @@ async function transaction(req, res, next) {
       });
   });
 }
-//Note to self:
-//you might be confused later on as to why I didnt need to call
-//the update method from the controller to validate the reservation
-//data. Since we are grabbing straight from the database and NOT,
-//from the client NO validation is necessary as the database can be
-//trusted.
+
 
 module.exports = {
   list: [asyncErrorBoundary(list)],
